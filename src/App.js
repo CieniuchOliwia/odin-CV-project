@@ -27,12 +27,8 @@ render(){
           <Contact />
           <button onClick={this.editFirstName}>Edit</button>
           </div>
-      }
-  
+      } 
 }
-
-
-
 }
 
 export default App;

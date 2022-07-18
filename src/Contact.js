@@ -1,10 +1,5 @@
 import React, {Component}  from "react";
 
-
-
-
-
-
 class ContactInput extends Component{
     constructor(){
         super()
@@ -13,35 +8,27 @@ class ContactInput extends Component{
             firstName:"Oliwia"
 
         }
+      
+        this.handleChange=this.handleChange.bind(this)
     }
       
-    
-    
+    handleChange(event){
+      this.setState({firstName:event.target.value})
+    }
+
     render(){
       return(
         <div>
     
             <form>
             <label htmlFor="firstName"></label>
-            <input type="text" id="firstName" value={this.state.firstName}></input>
-     
-    
+            <input type="text" id="firstName" value={this.state.firstName} onChange={this.handleChange}></input>
             </form>
     
         </div>
       )
     }
-    
-    
-    
     }
-
-
-
-
-
-
-
 
 
 class Contact extends Component{
@@ -52,8 +39,6 @@ constructor(){
         firstName:"Oliwia"
     }
 }
-  
-
 
 render(){
   return(
